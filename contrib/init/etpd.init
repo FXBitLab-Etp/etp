@@ -1,0 +1,67 @@
+#!/bin/bash
+#
+#  etpd The Etp Core server.
+#
+#
+# chkconfig: 345 80 20
+# description: etpd
+# processname: etpd
+#
+
+# Source function library.
+. /etc/init.d/functions
+
+# you can override defaults in /etc/sysconfig/etpd, see below
+if [ -f /etc/sysconfig/etpd ]; then
+        . /etc/sysconfig/etpd
+fi
+
+RETVAL=0
+
+prog=etpd
+# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/etpd
+lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/etpd}
+
+# etpd defaults to /usr/bin/etpd, override with BITCOIND_BIN
+etpd=${BITCOIND_BIN-/usr/bin/etpd}
+
+# etpd opts default to -disablewallet, override with BITCOIND_OPTS
+etpd_opts=${BITCOIND_OPTS--disablewallet}
+
+start() {
+    echo -n $"Starting $prog: "
+    daemon $DAEMONOPTS $etpd $etpd_opts
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && touch $lockfile
+    return $RETVAL
+}
+
+stop() {
+    echo -n $"Stopping $prog: "
+    killproc $prog
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && rm -f $lockfile
+    return $RETVAL
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    status)
+        status $prog
+        ;;
+    restart)
+        stop
+        start
+        ;;
+    *)
+        echo "Usage: service $prog {start|stop|status|restart}"
+        exit 1
+        ;;
+esac

@@ -1,0 +1,20 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/etp_bg.qm</file>
+        <file alias="de">locale/etp_de.qm</file>
+        <file alias="en">locale/etp_en.qm</file>
+        <file alias="es">locale/etp_es.qm</file>
+        <file alias="fi">locale/etp_fi.qm</file>
+        <file alias="fr">locale/etp_fr.qm</file>
+        <file alias="it">locale/etp_it.qm</file>
+        <file alias="ja">locale/etp_ja.qm</file>
+        <file alias="pl">locale/etp_pl.qm</file>
+        <file alias="pt">locale/etp_pt.qm</file>
+        <file alias="ru">locale/etp_ru.qm</file>
+        <file alias="sk">locale/etp_sk.qm</file>
+        <file alias="sv">locale/etp_sv.qm</file>
+        <file alias="vi">locale/etp_vi.qm</file>
+        <file alias="zh_CN">locale/etp_zh_CN.qm</file>
+        <file alias="zh_TW">locale/etp_zh_TW.qm</file>
+    </qresource>
+</RCC>

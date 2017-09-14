@@ -1,0 +1,6 @@
+usr/local/bin/etp-qt usr/bin
+share/pixmaps/etp32.xpm usr/share/pixmaps
+share/pixmaps/etp16.xpm usr/share/pixmaps
+share/pixmaps/etp128.png usr/share/pixmaps
+debian/etp-qt.desktop usr/share/applications
+debian/etp-qt.protocol usr/share/kde4/services/

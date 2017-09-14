@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Etp
+Comment=Etp P2P Cryptocurrency
+Comment[fr]=Etp, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Etp, eşten eşe kriptografik sanal para birimi
+Exec=etp-qt %u
+Terminal=false
+Type=Application
+Icon=etp128
+MimeType=x-scheme-handler/etp;
+Categories=Office;Finance;

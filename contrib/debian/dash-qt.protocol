@@ -1,0 +1,11 @@
+[Protocol]
+exec=etp-qt '%u'
+protocol=etp
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false
